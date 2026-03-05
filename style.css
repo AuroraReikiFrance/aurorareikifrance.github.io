@@ -89,15 +89,16 @@ footer {
 
 @media only screen and (max-width: 600px) {
   body {
-    font-size: 14px;
+    width: 350px;
+    font-size: 15px;
   }
   main {
-    width: 390px;
+    width: 350px;
   }
   img {
-    width: 230px;
+    width: 200px;
   }
   footer {
-    width: 630px;
+    width: 350px;
   }
 }
