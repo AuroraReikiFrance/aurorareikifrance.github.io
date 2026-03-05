@@ -93,15 +93,15 @@ footer {
     font-size: 16px;
   }
   header {
-    height: 100px;
+    height: 90px;
   }
   nav {
     font-size: 15px;
-    line-height: 1.2;
+    line-height: 1.5;
     margin-left: 15px;
     margin-top: 0px;
-    padding-left: 12px;
-    padding-top: 20px;
+    padding-left: 8px;
+    padding-top: 15px;
   }
   main {
     width: 320px;
