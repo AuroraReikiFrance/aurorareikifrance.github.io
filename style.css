@@ -96,7 +96,12 @@ footer {
     height: 100px;
   }
   nav {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-left: 15px;
+    margin-top: 0px;
+    padding-left: 12px;
+    padding-top: 20px;
   }
   main {
     width: 320px;
