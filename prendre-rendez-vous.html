@@ -30,8 +30,32 @@
 
       <h2>Prendre rendez-vous</h2>
       <p>Vous pouvez réserver votre séance directement en ligne.</p>
-      <p>[Widget de réservation intégré ici]</p>
 
+      <!-- Google Calendar Appointment Scheduling begin (popup via button) -->
+      <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+      <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+      <script>
+        (function() {
+          var target = document.currentScript;
+          window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3mT62QlLrZejma_4OtzP6QziDU3gkV1Yqshux7uIIrwtlgUl2es2UF8-i8FDhl7ItMItH_x1-P?gv=true',
+              color: '#039BE5',
+              label: 'Book an appointment',
+              target,
+            });
+          });
+        })();
+      </script>
+      <!-- end Google Calendar Appointment Scheduling (popup via button) -->
+
+      <p>[Widget de réservation intégré ici]</p>
+      
+      <!-- Google Calendar Appointment Scheduling begin (inline calendar) -->
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3mT62QlLrZejma_4OtzP6QziDU3gkV1Yqshux7uIIrwtlgUl2es2UF8-i8FDhl7ItMItH_x1-P?gv=true" 
+        style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+      <!-- end Google Calendar Appointment Scheduling (inline calendar) -->
+      
       <img src="https://images.pexels.com/photos/3451755/pexels-photo-3451755.jpeg" alt="Rising Up" class="center">
 
       <h2>Modalités de paiement</h2>
