@@ -191,37 +191,38 @@
   <!-- This script sends French contact form data to the Google Sheet "Forme de contact" -->
   <!-- Copied from the file "send_form_data_to_excel.html" in the "html-form-to-google-sheet" repository by "NeszenYT" on GitHub -->
   <script>
-      /* scriptURL is given by the Google Apps Script associated with the Google Sheet named "Forme de contact" */
-      const scriptURL =                       
+    /* scriptURL is given by the Google Apps Script associated with the Google Sheet named "Forme de contact" */
+    const scriptURL =                       
       "https://script.google.com/macros/s/AKfycbyBZYAi887Dz0TgpTea9miU4pJcOkUI3GUD6Pwz4F44OLJjxi7SjE143EZnRGpeTdSqfw/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        var formData = new FormData(form);
+    const form = document.forms["submit-to-google-sheet"];
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      var formData = new FormData(form);
 
-        /* script for age and ex checkboxes removed
-        var ex = document.getElementById("ex").checked;
-        var age = document.getElementById("age").checked;
+      /* script for age and ex checkboxes removed
+      var ex = document.getElementById("ex").checked;
+      var age = document.getElementById("age").checked;
 
-        if (age) {
-          formData.append("age", "Yes");
-        } else {
-          formData.append("age", "No");
-        }
-        if (ex) {
-          formData.append("ex", "Yes");
-        } else {
-          formData.append("ex", "No");
-        }
-        */
+      if (age) {
+        formData.append("age", "Yes");
+      } else {
+        formData.append("age", "No");
+      }
+      if (ex) {
+        formData.append("ex", "Yes");
+      } else {
+        formData.append("ex", "No");
+      }
+      */
 
-        fetch(scriptURL, { method: "POST", body: formData })
-          .then((response) => {
-            swal("Done", "Submitted Successfully.", "success");
-          })
-          .catch((error) => {
-            swal("Error", "Something went wrong. please try again!", "error");
-          });
-      });
-    </script>
+      fetch(scriptURL, { method: "POST", body: formData })
+        .then((response) => {
+          swal("Done", "Submitted Successfully.", "success");
+        })
+        .catch((error) => {
+          swal("Error", "Something went wrong. please try again!", "error");
+        });
+    }); /* end of event listener */
+  </script>
+  <!-- END OF CONTACT FORM SCRIPT -->
 </html>
