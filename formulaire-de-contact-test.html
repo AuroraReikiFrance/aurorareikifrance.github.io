@@ -50,12 +50,11 @@
       <img src="https://images.pexels.com/photos/23897318/pexels-photo-23897318.jpeg" alt="Rising Up" class="center">
 
       <!-- CONTACT FORM -->
-      <!-- This contact form works! It successfully transfer data to the Google Sheet named "LeviNunnink Formulaire de contact". -->
+      <!-- This contact form works! It successfully transfers data to the Google Sheet named "Test Formulaire de contact". -->
       <!-- However, the form itself is ugly and clicking the form button sends the user to a techie Google Script page. -->
-      <!-- Source - https://github.com/levinunnink/html-form-to-google-sheet -->
+      <!-- Source - https://github.com/levinunnink/html-form-to-google-sheet/ -->
       <form 
-        method="POST" 
-        action="https://script.google.com/macros/s/AKfycbxu0BMEkIlHJK6Cb2aO9P0TawqYQJHczWvwdAovciRrGkL2SDgx-kPvR5mMHAD_FHnlJA/exec"
+        id="formulaire-de-contact"
       >
         <input name="Nom" type="text" placeholder="Nom" required>
         <input name="Mail" type="email" placeholder="Mail" required>
@@ -91,6 +90,26 @@
         x.className = "topnav";
       }
     }
+  </script>
+
+  <!-- GitHub Source - https://github.com/levinunnink/html-form-to-google-sheet/ -->
+  <!-- Script Source - https://codepen.io/levinunnink-the-bashful/pen/YzxPyoG?editors=0010 -->
+  <script>
+    window.addEventListener("load", function() {
+      const form = document.getElementById('formulaire-de-contact');
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = https://script.google.com/macros/s/AKfycbxu0BMEkIlHJK6Cb2aO9P0TawqYQJHczWvwdAovciRrGkL2SDgx-kPvR5mMHAD_FHnlJA/exec;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+        .then(() => {
+          alert("Success!");
+        })
+      });
+    });
   </script>
 
 </html>
