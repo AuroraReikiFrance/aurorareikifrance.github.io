@@ -208,10 +208,10 @@
     /* From there, copy the URL given under the heading "Web app". */
     const scriptURL =                       
       "https://script.google.com/macros/s/AKfycbyBZYAi887Dz0TgpTea9miU4pJcOkUI3GUD6Pwz4F44OLJjxi7SjE143EZnRGpeTdSqfw/exec";
-    const form = document.forms["submit-to-google-sheet"];
+    const form = document.forms["submit-to-google-sheet"];   // this is the data from the contact form
     form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      var formData = new FormData(form);
+      e.preventDefault();  // prevents default behavior that would normally occur when the submit button of the contact form is clicked
+      var formData = new FormData(form);  // creates a new variable of type FormData filled with data from the contact form
 
       /* script for age and ex checkboxes removed
       var ex = document.getElementById("ex").checked;
