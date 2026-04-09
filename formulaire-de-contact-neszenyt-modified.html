@@ -248,10 +248,22 @@
       // Instead, we create a response message with the web page itself.
       fetch(scriptURL, { method: "POST", body: formData })
         .then((response) => {
-          document.getElementById("contact-form-response").innerHTML = "Submitted Successfully.";
+          document.getElementById("contact-form-response").innerHTML = 
+            "
+              La formulaire de contact a été envoyé avec succès.
+              <button type="submit" class="btn btn-primary btn-block">
+                Réinitialiser la formulaire de contact
+              </button>
+            ";
         })
         .catch((error) => {
-          document.getElementById("contact-form-response").innerHTML = "Something went wrong. please try again!";
+          document.getElementById("contact-form-response").innerHTML = 
+            "
+              Il y a un problème. La formulaire de contact n'a pas été envoyé.
+              <button type="submit" class="btn btn-primary btn-block">
+                Réinitialiser la formulaire de contact
+              </button>
+            ";
         });
     }); /* end of event listener */
   </script>
