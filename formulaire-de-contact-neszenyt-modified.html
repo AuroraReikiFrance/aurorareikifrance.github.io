@@ -84,6 +84,9 @@
       <!-- YouTube - https://youtu.be/Haln_jSYjHY?si=ZVHDdomAiZAUqvxo -->
       <div class="container">
         <div class="form-container">
+          <div id="contact-form-response">
+            
+          </div>
           <h2 class="text-center mb-4">Formulaire de contact</h2> <!-- title of the contact form -->
           <form id="submit-to-google-sheet"> <!-- this id is used the in the contact sheet script down further -->
           
@@ -231,12 +234,26 @@
 
       // The following fetch sequence creates a customizable pop-up window using the swal function.
       // We need to modify this bit since it isn't compatible with ad blockers.
+      /*
       fetch(scriptURL, { method: "POST", body: formData })
         .then((response) => {
           swal("Done", "Submitted Successfully.", "success");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
         })
         .catch((error) => {
           swal("Error", "Something went wrong. please try again!", "error");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
+        });
+      */
+      
+      // The following fetch sequence is my modified version that doesn't create a pop-up window.
+      // Instead, we create a response message with the web page itself.
+      fetch(scriptURL, { method: "POST", body: formData })
+        .then((response) => {
+          swal("Done", "Submitted Successfully.", "success");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
+          document.getElementById("contact-form-response").innerHTML = "Submitted Successfully.";
+        })
+        .catch((error) => {
+          swal("Error", "Something went wrong. please try again!", "error");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
+          document.getElementById("contact-form-response").innerHTML = "Something went wrong. please try again!";
         });
     }); /* end of event listener */
   </script>
