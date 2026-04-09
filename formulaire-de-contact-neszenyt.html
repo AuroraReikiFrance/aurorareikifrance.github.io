@@ -196,13 +196,15 @@
   </script>
 
   <!-- CONTACT FORM SCRIPT -->
-  <!-- My website says that contact form data that I enter is sent but the data never reaches my Google Sheet -->
   <!-- This script sends French contact form data to the Google Sheet "Forme de contact" -->
   <!-- Copied from the file "send_form_data_to_excel.html" in the "html-form-to-google-sheet" repository by "NeszenYT" on GitHub -->
   <!-- GitHub - https://github.com/NeszenYT/html-form-to-google-sheet -->
   <!-- YouTube - https://youtu.be/Haln_jSYjHY?si=ZVHDdomAiZAUqvxo -->
   <script>
-    /* scriptURL is given by the Google Apps Script associated with the Google Sheet named "Forme de contact" */
+    /* scriptURL is given by the Google Apps script associated with the Google Sheet named "Forme de contact" */
+    /* To get the exact URL from the Google Sheet, go to the "Extensions" menu, then "Apps Script". */
+    /* This gets us to the script on the Google side.  Next, go to the "Deploy" menu, then "Manage Deployments". */
+    /* From there, copy the URL given under the heading "Web app". */
     const scriptURL =                       
       "https://script.google.com/macros/s/AKfycbyBZYAi887Dz0TgpTea9miU4pJcOkUI3GUD6Pwz4F44OLJjxi7SjE143EZnRGpeTdSqfw/exec";
     const form = document.forms["submit-to-google-sheet"];
