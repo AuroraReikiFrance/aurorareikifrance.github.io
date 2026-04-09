@@ -229,12 +229,14 @@
       }
       */
 
+      // The following fetch sequence creates a customizable pop-up window using the swal function.
+      // We need to modify this bit since it isn't compatible with ad blockers.
       fetch(scriptURL, { method: "POST", body: formData })
         .then((response) => {
-          swal("Done", "Submitted Successfully.", "success");
+          swal("Done", "Submitted Successfully.", "success");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
         })
         .catch((error) => {
-          swal("Error", "Something went wrong. please try again!", "error");
+          swal("Error", "Something went wrong. please try again!", "error");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
         });
     }); /* end of event listener */
   </script>
