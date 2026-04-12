@@ -84,11 +84,9 @@
       <!-- YouTube - https://youtu.be/Haln_jSYjHY?si=ZVHDdomAiZAUqvxo -->
       <div class="container">
         <div class="form-container">
-          <div id="contact-form-response">
-            
-          </div>
+          
           <h2 class="text-center mb-4">Formulaire de contact</h2> <!-- title of the contact form -->
-          <form id="submit-to-google-sheet"> <!-- this id is used the in the contact sheet script down further -->
+          <form id="submit-to-google-sheet"> <!-- the id of this form is used the in the contact sheet script down further -->
           
             <div class="form-group">
               <label for="nom">Nom:</label>
@@ -248,7 +246,7 @@
       // Instead, we create a response message with the web page itself.
       fetch(scriptURL, { method: "POST", body: formData })
         .then((response) => {
-          document.getElementById("contact-form-response").innerHTML = 
+          document.getElementById("submit-to-google-sheet").innerHTML = 
             "
               La formulaire de contact a été envoyé avec succès.
               <button type="reset" class="btn btn-primary btn-block">
@@ -257,7 +255,7 @@
             ";
         })
         .catch((error) => {
-          document.getElementById("contact-form-response").innerHTML = 
+          document.getElementById("submit-to-google-sheet").innerHTML = 
             "
               Il y a un problème. La formulaire de contact n'a pas été envoyé.
               <button type="reset" class="btn btn-primary btn-block">
