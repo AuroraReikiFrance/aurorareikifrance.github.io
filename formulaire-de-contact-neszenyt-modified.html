@@ -248,14 +248,14 @@
         .then((response) => {
           document.getElementById("submit-to-google-sheet").innerHTML = 
             'Le formulaire de contact a été envoyé avec succès.' +
-            '<button type="reset" class="btn btn-primary btn-block">' +
+            '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
               'Réinitialiser la formulaire de contact' +
             '</button>';
         })
         .catch((error) => {
           document.getElementById("submit-to-google-sheet").innerHTML = 
             "Il y a un problème. Le formulaire de contact n'a pas été envoyé." +
-            '<button type="reset" class="btn btn-primary btn-block">' +
+            '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
               'Réinitialiser la formulaire de contact' +
             '</button>';
         });
