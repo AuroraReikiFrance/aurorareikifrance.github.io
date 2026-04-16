@@ -247,16 +247,18 @@
       fetch(scriptURL, { method: "POST", body: formData })
         .then((response) => {
           document.getElementById("submit-to-google-sheet").innerHTML = 
-            'Le formulaire de contact a été envoyé avec succès.' +
+            '<h3>Le formulaire de contact a été envoyé avec succès!</h3>' +
+            '<br>' +
             '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
-              'Réinitialiser la formulaire de contact' +
+              'Réinitialiser le formulaire de contact' +
             '</button>';
         })
         .catch((error) => {
           document.getElementById("submit-to-google-sheet").innerHTML = 
-            "Il y a un problème. Le formulaire de contact n'a pas été envoyé." +
+            "<h3>Il y a un problème. Le formulaire de contact n'a pas été envoyé.</h3>" +
+            '<br>' +
             '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
-              'Réinitialiser la formulaire de contact' +
+              'Réinitialiser le formulaire de contact' +
             '</button>';
         });
     }); /* end of event listener */
