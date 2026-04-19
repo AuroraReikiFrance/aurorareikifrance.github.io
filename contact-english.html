@@ -81,41 +81,41 @@
       <div class="container">
         <div class="form-container">
           
-          <h2 class="text-center mb-4">Formulaire de contact</h2> <!-- title of the contact form -->
+          <h2 class="text-center mb-4">Contact Form</h2> <!-- title of the contact form -->
           <form id="submit-to-google-sheet"> <!-- the id of this form is used the in the contact sheet script down further -->
           
             <div class="form-group">
-              <label for="nom">Nom:</label>
+              <label for="name">Name:</label>
               <input
                 class="form-control"
                 type="text"
-                name="nom"
-                id="nom"
-                placeholder="nom"
+                name="name"
+                id="name"
+                placeholder="name"
                 required
               />
             </div>
           
             <div class="form-group">
-              <label for="mail">Mail:</label>
+              <label for="email">Email:</label>
               <input
                 class="form-control"
                 type="email"
-                name="mail"
-                id="mail"
-                placeholder="mail"
+                name="email"
+                id="email"
+                placeholder="email"
                 required
               />
             </div>
           
             <div class="form-group">
-              <label for="telephone">Téléphone:</label>
+              <label for="telephone">Telephone:</label>
               <input
                 class="form-control"
                 type="text"
                 name="telephone"
                 id="telephone"
-                placeholder="téléphone"
+                placeholder="telephone"
                 required
               />
             </div>
@@ -161,11 +161,11 @@
             -->
             
             <button type="submit" class="btn btn-primary btn-block">
-              Envoyer
+              Submit
             </button>
             <p>
               <br>
-              (Le bouton "Envoyer" prends quelques secondes pour agir!)
+              (The "Submit" button takes a few seconds to act)
             </p>
           </form>  <!-- end of "submit-to-google-sheet" form -->
         </div> <!-- end of "form-container" div -->
@@ -247,18 +247,18 @@
       fetch(scriptURL, { method: "POST", body: formData })
         .then((response) => {
           document.getElementById("submit-to-google-sheet").innerHTML = 
-            '<p>Le formulaire de contact a été envoyé avec succès!</p>' +
+            '<p>The contact form was sent successfully.</p>' +
             '<br>' +
             '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
-              'Réinitialiser le formulaire de contact' +
+              'Refresh the contact form' +
             '</button>';
         })
         .catch((error) => {
           document.getElementById("submit-to-google-sheet").innerHTML = 
-            "<p>Il y a un problème. Le formulaire de contact n'a pas été envoyé.</p>" +
+            "<p>An error ocurred.  The contact form was not sent.</p>" +
             '<br>' +
             '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
-              'Réinitialiser le formulaire de contact' +
+              'Refresh the contact form' +
             '</button>';
         });
     }); /* end of event listener */
