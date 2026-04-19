@@ -40,9 +40,106 @@
 
       <img src="https://images.pexels.com/photos/23897318/pexels-photo-23897318.jpeg" alt="Rising Up" class="center">
 
-      <!--
+      <!-- CONTACT FORM -->
+      <!-- My website says that contact form data that I enter is sent but the data never reaches my Google Sheet -->
+      <!-- Copied from the file "send_form_data_to_excel.html" in the "html-form-to-google-sheet" repository by "NeszenYT" on GitHub -->
+      <!-- GitHub - https://github.com/NeszenYT/html-form-to-google-sheet -->
+      <!-- YouTube - https://youtu.be/Haln_jSYjHY?si=ZVHDdomAiZAUqvxo -->
+      <div class="container">
+        <div class="form-container">
+          
+          <h2 class="text-center mb-4">Formulaire de contact</h2> <!-- title of the contact form -->
+          <form id="submit-to-google-sheet"> <!-- the id of this form is used the in the contact sheet script down further -->
+          
+            <div class="form-group">
+              <label for="nom">Nom:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="nom"
+                id="nom"
+                placeholder="nom"
+                required
+              />
+            </div>
+          
+            <div class="form-group">
+              <label for="mail">Mail:</label>
+              <input
+                class="form-control"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="mail"
+                required
+              />
+            </div>
+          
+            <div class="form-group">
+              <label for="telephone">Téléphone:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="telephone"
+                id="telephone"
+                placeholder="téléphone"
+                required
+              />
+            </div>
+
+            <!-- Gender checkbox removed
+            <div class="form-group">
+              <label for="loc">Gender:</label>
+              <select class="form-control" name="gender" id="gender" required>
+                <option value="" disabled selected hidden>Choose...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            -->
+          
+            <div class="form-group">
+              <label for="loc">Message:</label>
+              <textarea
+                class="form-control"
+                name="message"
+                id="message"
+                placeholder="message"
+                required
+              ></textarea>
+
+            <!-- Age checkbox removed
+            <div class="form-group form-check mt-2">
+              <input class="form-check-input" type="checkbox" id="age" />
+              <label class="form-check-label" for="age"
+                >Check if you are over 18 years old</label
+              >
+            </div>
+            -->
+
+            <!-- Data terms & policies checkbox removed
+            <div class="form-group form-check">
+              <input class="form-check-input" type="checkbox" id="ex" required />
+              <label class="form-check-label" for="ex"
+                >By checking this box I certify that I am agree with the data
+                terms and policies.
+              </label>
+            </div>
+            -->
+            
+            <button type="submit" class="btn btn-primary btn-block">
+              Envoyer
+            </button>
+            <p>
+              <br>
+              (Le bouton "Envoyer" prends quelques secondes pour agir!)
+            </p>
+          </form>  <!-- end of "submit-to-google-sheet" form -->
+        </div> <!-- end of "form-container" div -->
+      </div> <!-- end of "container" div -->
+      <!-- END OF CONTACT FORM -->
+
       <img src="https://images.pexels.com/photos/11685290/pexels-photo-11685290.jpeg" alt="Rising Up" class="center">
-      -->
 
       <h2>Opening Hours</h2>
       <p>By appointment only.</p>
@@ -66,4 +163,72 @@
       }
     }
   </script>
+
+  <!-- CONTACT FORM SCRIPT -->
+  <!-- This script sends French contact form data to the Google Sheet "Forme de contact" -->
+  <!-- Copied from the file "send_form_data_to_excel.html" in the "html-form-to-google-sheet" repository by "NeszenYT" on GitHub -->
+  <!-- GitHub - https://github.com/NeszenYT/html-form-to-google-sheet -->
+  <!-- YouTube - https://youtu.be/Haln_jSYjHY?si=ZVHDdomAiZAUqvxo -->
+  <script>
+    /* scriptURL is given by the Google Apps script associated with the Google Sheet named "Forme de contact" */
+    /* To get the exact URL from the Google Sheet, go to the "Extensions" menu, then "Apps Script". */
+    /* This gets us to the script on the Google side.  Next, go to the "Deploy" menu, then "Manage Deployments". */
+    /* From there, copy the URL given under the heading "Web app". */
+    const scriptURL =       // URL for the Google web app that puts our contact form data in a Google Sheet
+      "https://script.google.com/macros/s/AKfycbyI-wfTd9EsrL1_YQnlopYOnp7WsWRsaZ7ndhH0iYpFHy8moClupmzYl1tRF6y2Csou9A/exec";
+    const form = document.forms["submit-to-google-sheet"];   // this is the data from the contact form
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();  // prevents default behavior that would normally occur when the submit button of the contact form is clicked
+      var formData = new FormData(form);  // creates a new variable of type FormData filled with data from the contact form
+
+      /* script for age and ex checkboxes removed
+      var ex = document.getElementById("ex").checked;
+      var age = document.getElementById("age").checked;
+
+      if (age) {
+        formData.append("age", "Yes");
+      } else {
+        formData.append("age", "No");
+      }
+      if (ex) {
+        formData.append("ex", "Yes");
+      } else {
+        formData.append("ex", "No");
+      }
+      */
+
+      // The following fetch sequence creates a customizable pop-up window using the swal function.
+      // We need to modify this bit since it isn't compatible with ad blockers.
+      /*
+      fetch(scriptURL, { method: "POST", body: formData })
+        .then((response) => {
+          swal("Done", "Submitted Successfully.", "success");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
+        })
+        .catch((error) => {
+          swal("Error", "Something went wrong. please try again!", "error");   // swal creates a customizable pop-up alert using the "Sweet Alert 2" library
+        });
+      */
+      
+      // The following fetch sequence is my modified version that doesn't create a pop-up window.
+      // Instead, we create a response message with the web page itself.
+      fetch(scriptURL, { method: "POST", body: formData })
+        .then((response) => {
+          document.getElementById("submit-to-google-sheet").innerHTML = 
+            '<p>Le formulaire de contact a été envoyé avec succès!</p>' +
+            '<br>' +
+            '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
+              'Réinitialiser le formulaire de contact' +
+            '</button>';
+        })
+        .catch((error) => {
+          document.getElementById("submit-to-google-sheet").innerHTML = 
+            "<p>Il y a un problème. Le formulaire de contact n'a pas été envoyé.</p>" +
+            '<br>' +
+            '<button type="reset" class="btn btn-primary btn-block" onClick="window.location.reload();">' +
+              'Réinitialiser le formulaire de contact' +
+            '</button>';
+        });
+    }); /* end of event listener */
+  </script>
+  <!-- END OF CONTACT FORM SCRIPT -->
 </html>
