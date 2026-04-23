@@ -91,6 +91,12 @@ h3 {
   /* color: #FF0000; /* color: red */
 }
 
+.green-text {
+  /* color: #FFCCCB; /* light red */
+  color: lightgreen;
+  /* color: #FF0000; /* color: red */
+}
+
 footer {
   width: 630px;
   margin: auto;
