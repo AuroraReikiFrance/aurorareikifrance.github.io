@@ -132,7 +132,7 @@ a {
 
 
 main {
-  width: 640px;
+  width: 700px;
   margin: auto;
 }
 
@@ -211,7 +211,7 @@ footer {
 }
 
 /*
-  When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+  When the screen is less than 600 pixels wide, hide all links on the nav bar, except for the first one ("Home"). 
   Show the link that contains should open and close the topnav (.icon) 
 */
 @media screen and (max-width: 600px) {
