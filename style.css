@@ -18,6 +18,7 @@ a {
   color: #FFFFD8;
 }
 
+/* The following CSS comes from https://www.w3schools.com/howto/howto_js_topnav.asp */
 /* Add a black background color to the top navigation */
 .topnav {
  background-color: #333;
@@ -46,6 +47,7 @@ a {
  background-color: #04AA6D;
  color: white;
 }
+/* End of CSS for top nav bar */
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
