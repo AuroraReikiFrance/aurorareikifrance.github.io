@@ -49,13 +49,12 @@ a {
  background-color: #04AA6D;
  color: white;
 }
-/* End of CSS for top nav bar */
-
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
  display: none;
 }
+/* End of CSS for top nav bar */
 
 
 /* The following CSS is for the drop-down menu - https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
