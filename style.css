@@ -20,7 +20,7 @@ a {
   color: #FFFFD8;
 }
 
-/* The following CSS is for the top navigation bar - https://www.w3schools.com/howto/howto_js_topnav.asp */
+/* START of CSS for the TOP NAVIGATION BAR - https://www.w3schools.com/howto/howto_js_topnav.asp */
 /* Add a black background color to the top navigation */
 .topnav {
  background-color: #333;       /* dark grey - default background color of navbar cells */
@@ -54,10 +54,10 @@ a {
 .topnav .icon {
  display: none;
 }
-/* End of CSS for top nav bar */
+/* END of CSS for TOP NAVIGATION BAR */
 
 
-/* The following CSS is for the drop-down menu - https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+/* START of CSS for the DROP-DOWN MENU - https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
 /* Navbar container */
 .navbar {
   overflow: hidden;
@@ -127,7 +127,7 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
 } 
-/* End of CSS for drop-down menu */
+/* END of CSS for DROP-DOWN MENU */
 
 
 main {
