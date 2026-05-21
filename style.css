@@ -45,10 +45,10 @@ a {
 }
 
 /* Add an active class to highlight the current page */
-/*
+/* not currently used
 .topnav a.active {
- background-color: #04AA6D;   /* forest green - background color of current page's cell in the navbar */
- color: white;                /* white - text color of current page's cell in the navbar */
+ background-color: #04AA6D;
+ color: white;
 }
 */
 
