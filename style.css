@@ -12,7 +12,7 @@ body {
   /* font-weight: 50; */
   font-size: 19px;
   line-height: 1.1;
-  color: #FFFFD8; /* close to lightyellow which is #FFFFE0 */
+  color: #FFFFD8;          /* default text color - close to lightyellow which is #FFFFE0 */
   background-color: black;
 }
 
