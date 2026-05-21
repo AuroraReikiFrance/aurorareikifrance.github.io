@@ -40,7 +40,7 @@ a {
 
 /* Change the color of links on hover */
 .topnav a:hover {
- background-color: #04BB50;     /* green - background color of navbar cells on hover */ 
+ background-color: #04BB50;     /* between green and forest green - background color of navbar cells on hover */ 
  color: white;               /* white - text color of cells on hover */
 }
 
