@@ -45,10 +45,12 @@ a {
 }
 
 /* Add an active class to highlight the current page */
+/*
 .topnav a.active {
  background-color: #04AA6D;   /* forest green - background color of current page's cell in the navbar */
  color: white;                /* white - text color of current page's cell in the navbar */
 }
+*/
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
