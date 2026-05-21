@@ -62,14 +62,17 @@ a {
 /* START of CSS for the DROP-DOWN MENU - https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
 /* Navbar container */
 /* .navbar is not currently being used, it has been replaced by .topnav */
+/*
 .navbar {
   overflow: hidden;
-  background-color: #333;     /* dark grey - default background color of dropdown cell in the navbar */
+  background-color: #333;     
   font-family: Arial;
 }
+*/
 
 /* Links inside the navbar */
 /* .navbar is not currently being used, it has been replaced by .topnav */
+/*
 .navbar a {
   float: left;
   font-size: 16px;
@@ -78,6 +81,7 @@ a {
   padding: 14px 16px;
   text-decoration: none;
 }
+*/
 
 /* Dropdown container/wrapper */
 .dropdown {
