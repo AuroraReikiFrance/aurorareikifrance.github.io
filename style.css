@@ -154,8 +154,9 @@ img {
   width: 350px;
 }
 
+/* CSS for the TAKE ACTION buttons */
 button.booking-button {
-  margin: 5px;
+  margin: 10px;
   border: 1px solid white;
   border-radius: 15px;
   background-color: #3030FF;
