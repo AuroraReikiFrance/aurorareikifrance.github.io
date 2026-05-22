@@ -155,10 +155,10 @@ img {
 }
 
 button.booking-button {
-  border-radius: 25px;
-  background-color: #0000FF;
+  border-radius: 15px;
+  background-color: #3030FF;
   color: white;
-  padding: 14px 25px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
