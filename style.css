@@ -154,6 +154,19 @@ img {
   width: 350px;
 }
 
+.booking-button:link .booking-button:visited {
+  background-color: #333;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.booking-button:hover .booking-button:active {
+  background-color: #04AD50;
+}
+
 .top-image-div {
   margin-top: 15px;
 }
