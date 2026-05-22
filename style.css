@@ -126,9 +126,9 @@ a {
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* Add a dark grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #333;   /* same color as default menu bar background */
 }
 
 /* Show the dropdown menu on hover */
