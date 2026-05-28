@@ -160,7 +160,7 @@ button.booking-button {
   margin: 10px;
   border: 1px solid white;
   border-radius: 15px;
-  background-color: #dd3300;
+  background-color: #04FF50;  /* red by default */
   color: white;
   padding: 10px 10px;
   font-size: 19px;
@@ -170,7 +170,7 @@ button.booking-button {
 }
 
 button.booking-button:hover {
-  background-color: #04AD50;
+  background-color: #04AD50;  /* green on hover */
 }
 
 .top-image-div {
