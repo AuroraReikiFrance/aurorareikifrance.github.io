@@ -25,8 +25,9 @@ a {
 /* START of CSS for the TOP NAVIGATION BAR - https://www.w3schools.com/howto/howto_js_topnav.asp */
 /* Add a black background color to the top navigation */
 .topnav {
- background-color: #333;       /* dark grey - default background color of navbar cells */
- overflow: hidden;
+  background-color: #333;       /* dark grey - default background color of navbar cells */
+  overflow: hidden;
+  width: 1000px;
 }
 
 /* Style the links inside the navigation bar */
