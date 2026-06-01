@@ -28,6 +28,7 @@ a {
   background-color: #333;       /* dark grey - default background color of navbar cells */
   overflow: hidden;
   width: 1000px;
+  margin: auto;
 }
 
 /* Style the links inside the navigation bar */
