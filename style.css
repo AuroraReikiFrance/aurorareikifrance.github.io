@@ -1,3 +1,26 @@
+/* global scope CSS variables */
+:root {
+  /* body element colors */
+  --body-color: #FFFFD8;            /* a very light yellow */
+  --body-background-color: black;
+
+  /* navbar default colors */
+  --navbar-color: #f2f2f2;          /* a very light grey */
+  --navbar-background-color: #333;  /* a dark grey */
+
+  /* navbar colors on hover */
+  --navbar-color-hover: white;
+  --navbar-background-color-hover: #04AD50;  /* between green and forest green - background color of navbar cells on hover */
+
+  /* dropdown menu colors */
+  --dropdown-color: black;
+  --dropdown-background-color: #f9f9f9;  /* off-white */ 
+
+  /* dropdown menu colors on hover */
+  --dropdown-color-hover: white;
+  --dropdown-background-color-hover: #555;  /* a dark grey */ 
+}
+  
 body {
   /*
   border-color: white;
@@ -14,18 +37,18 @@ body {
   /* font-weight: 50; */
   font-size: 19px;
   line-height: 1.1;
-  color: #FFFFD8;          /* default text color - close to lightyellow which is #FFFFE0 */
-  background-color: black;
+  color: var(--body-color);          /* default text color - close to lightyellow which is #FFFFE0 */
+  background-color: var(--body-background-color);
 }
 
 a {
-  color: #FFFFD8;    /* default text color for links - a very light yellow */
+  color: var(--body-color);    /* default text color for links - a very light yellow */
 }
 
 /* START of CSS for the TOP NAVIGATION BAR - https://www.w3schools.com/howto/howto_js_topnav.asp */
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;       /* dark grey - default background color of navbar cells */
+  background-color: var(--navbar-background-color);       /* dark grey - default background color of navbar cells */
   overflow: hidden;
   width: 1000px;
   margin: auto;
@@ -35,23 +58,23 @@ a {
 .topnav a {
  float: left;
  display: block;
- color: #f2f2f2;              /* very light grey - default text color of navbar titles */
+ color: var(--navbar-color);              /* very light grey - default text color of navbar titles */
  text-align: center;
  padding: 14px 16px;
  text-decoration: none;
  font-size: 19px;
 }
 
-/* Change the color of links on hover */
+/* Change the color of navbar links on hover */
 .topnav a:hover {
- background-color: #04AD50;     /* between green and forest green - background color of navbar cells on hover */ 
- color: white;               /* white - text color of cells on hover */
+ background-color: var(--navbar-background-color-hover);     /* between green and forest green - background color of navbar cells on hover */ 
+ color: var(--navbar-color-hover);               /* white - text color of cells on hover */
 }
 
 /* Add an active class to highlight the current page */
 /* not currently used
 .topnav a.active {
- background-color: #04AA6D;
+ background-color: var(--navbar-color-hover);
  color: white;
 }
 */
@@ -98,7 +121,7 @@ a {
   font-size: 16px;
   border: none;
   outline: none;
-  color: white;
+  color: var(--navbar-color);
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;       /* Important for vertical align on mobile phones */
@@ -107,14 +130,14 @@ a {
 
 /* Add a background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #04AD50;
+  background-color: var(--navbar-background-color-hover);
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: var(--dropdown-background-color);      /* very close to white */
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -123,7 +146,7 @@ a {
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
+  color: var(--dropdown-color);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -132,7 +155,7 @@ a {
 
 /* Add a dark grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #555;
+  background-color: var(--dropdown-background-color-hover);     /* dark grey */
 }
 
 /* Show the dropdown menu on hover */
