@@ -45,7 +45,14 @@ a {
   color: var(--body-color);    /* default text color for links - a very light yellow */
 }
 
+
 /* START of CSS for the TOP NAVIGATION BAR - https://www.w3schools.com/howto/howto_js_topnav.asp */
+
+/* font size for top navigation bar */
+.topnav a, .dropdown .dropbtn {
+  font-size: 19px;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: var(--navbar-background-color);       /* dark grey - default background color of navbar cells */
@@ -62,7 +69,6 @@ a {
  text-align: center;
  padding: 14px 16px;
  text-decoration: none;
- font-size: 19px;
 }
 
 /* Change the color of navbar links on hover */
@@ -118,7 +124,6 @@ a {
 
 /* Dropdown button - this is the default style of the drop-down cell of the menu bar */
 .dropdown .dropbtn {
-  font-size: 16px;
   border: none;
   outline: none;
   color: var(--navbar-color);
